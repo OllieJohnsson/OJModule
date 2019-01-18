@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E4DB6AE14AC5A16967421BF /* libPods-OJModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBC0723179F3DF3011A0456 /* libPods-OJModule.a */; };
 		A7CD833421F1D45800BCCE47 /* OJModule.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CD833221F1D45800BCCE47 /* OJModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7CD833B21F1D46D00BCCE47 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CD833A21F1D46D00BCCE47 /* TestController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BBC0723179F3DF3011A0456 /* libPods-OJModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OJModule.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CD832F21F1D45800BCCE47 /* OJModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OJModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CD833221F1D45800BCCE47 /* OJModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OJModule.h; sourceTree = "<group>"; };
 		A7CD833321F1D45800BCCE47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7CD833A21F1D46D00BCCE47 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		C8F25E805AD46C788175165A /* Pods-OJModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OJModule.release.xcconfig"; path = "Pods/Target Support Files/Pods-OJModule/Pods-OJModule.release.xcconfig"; sourceTree = "<group>"; };
+		CD1B893C570E2B2760565E0E /* Pods-OJModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OJModule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OJModule/Pods-OJModule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4DB6AE14AC5A16967421BF /* libPods-OJModule.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EEB0CE7BC91CA5C0BA33FFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BBC0723179F3DF3011A0456 /* libPods-OJModule.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A7CD832521F1D45800BCCE47 = {
 			isa = PBXGroup;
 			children = (
 				A7CD833121F1D45800BCCE47 /* OJModule */,
 				A7CD833021F1D45800BCCE47 /* Products */,
+				E9B8F4FC9DF0334C356B2372 /* Pods */,
+				0EEB0CE7BC91CA5C0BA33FFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +65,18 @@
 			children = (
 				A7CD833221F1D45800BCCE47 /* OJModule.h */,
 				A7CD833321F1D45800BCCE47 /* Info.plist */,
+				A7CD833A21F1D46D00BCCE47 /* TestController.swift */,
 			);
 			path = OJModule;
+			sourceTree = "<group>";
+		};
+		E9B8F4FC9DF0334C356B2372 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD1B893C570E2B2760565E0E /* Pods-OJModule.debug.xcconfig */,
+				C8F25E805AD46C788175165A /* Pods-OJModule.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +97,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7CD833721F1D45800BCCE47 /* Build configuration list for PBXNativeTarget "OJModule" */;
 			buildPhases = (
+				1C31014E088F0EA801550DAC /* [CP] Check Pods Manifest.lock */,
 				A7CD832A21F1D45800BCCE47 /* Headers */,
 				A7CD832B21F1D45800BCCE47 /* Sources */,
 				A7CD832C21F1D45800BCCE47 /* Frameworks */,
@@ -95,6 +123,7 @@
 				TargetAttributes = {
 					A7CD832E21F1D45800BCCE47 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -125,11 +154,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C31014E088F0EA801550DAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OJModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A7CD832B21F1D45800BCCE47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CD833B21F1D46D00BCCE47 /* TestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +315,9 @@
 		};
 		A7CD833821F1D45800BCCE47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD1B893C570E2B2760565E0E /* Pods-OJModule.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = oliver.OJModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,7 +343,9 @@
 		};
 		A7CD833921F1D45800BCCE47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8F25E805AD46C788175165A /* Pods-OJModule.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
